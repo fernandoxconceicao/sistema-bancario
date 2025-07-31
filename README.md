@@ -1,18 +1,21 @@
-# Sistema Bancário Simples
+# Sistema Bancário em Python
 
-Este é um projeto simples de sistema bancário desenvolvido em Python, que permite ao usuário realizar operações básicas como depósito, saque, visualizar extrato e sair do sistema.
+Este é um projeto de sistema bancário simples, desenvolvido em Python, que permite criar usuários, contas bancárias, realizar depósitos, saques, consultar extrato e listar contas.
 
 ## Funcionalidades
 
-- **Depósito:** Permite adicionar saldo à conta.
-- **Saque:** Permite retirar saldo da conta, respeitando o limite de valor e quantidade de saques diários.
-- **Extrato:** Exibe todas as movimentações realizadas e o saldo atual.
-- **Sair:** Encerra o programa.
+- **Depósito:** Realize depósitos em sua conta.
+- **Saque:** Saque valores respeitando o limite diário e por operação.
+- **Extrato:** Consulte todas as movimentações e o saldo atual.
+- **Novo Usuário:** Cadastre novos usuários no sistema.
+- **Nova Conta:** Crie contas bancárias para usuários já cadastrados.
+- **Listar Contas:** Veja todas as contas cadastradas no sistema.
+- **Sair:** Encerre o programa.
 
 ## Como usar
 
 1. **Clone este repositório ou copie o código para um arquivo chamado `banco.py`.**
-2. **Execute o arquivo em seu terminal:**
+2. **Execute o arquivo no terminal:**
    ```bash
    python banco.py
    ```
@@ -21,25 +24,15 @@ Este é um projeto simples de sistema bancário desenvolvido em Python, que perm
 ## Exemplo de uso
 
 ```
-[d] Depositar
-[s] Sacar
-[e] Extrato
-[q] Sair
-
-=> d
-Informe o valor do depósito: 100
-
-=> s
-Informe o valor do saque: 50
-
-=> e
-
-================ EXTRATO ================
-Depósito: R$ 100.00
-Saque: R$ 50.00
-
-Saldo: R$ 50.00
-==========================================
+================ MENU ================
+[d]	Depositar
+[s]	Sacar
+[e]	Extrato
+[nc]	Nova conta
+[lc]	Listar contas
+[nu]	Novo usuário
+[q]	Sair
+=>
 ```
 
 ## Regras do sistema
@@ -48,6 +41,8 @@ Saldo: R$ 50.00
 - O número máximo de saques diários é 3.
 - Não é permitido sacar valores superiores ao saldo disponível.
 - Não é permitido depositar ou sacar valores negativos ou zerados.
+- Para criar uma conta, o usuário deve estar cadastrado no sistema (CPF único).
+- Cada conta possui um número único e está vinculada a um usuário.
 
 ## Requisitos
 
