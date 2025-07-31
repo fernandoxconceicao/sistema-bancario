@@ -1,20 +1,21 @@
-# Sistema Bancário em Python
+# Sistema Bancário em Python (OOP)
 
-Este é um projeto de sistema bancário simples, desenvolvido em Python, que permite criar usuários, contas bancárias, realizar depósitos, saques, consultar extrato e listar contas.
+Este projeto é um sistema bancário simples, desenvolvido em Python, utilizando conceitos de **Programação Orientada a Objetos** (POO). O sistema permite criar clientes, contas, realizar depósitos, saques, consultar extratos e listar contas, tudo de forma interativa pelo terminal.
 
 ## Funcionalidades
 
-- **Depósito:** Realize depósitos em sua conta.
-- **Saque:** Saque valores respeitando o limite diário e por operação.
-- **Extrato:** Consulte todas as movimentações e o saldo atual.
-- **Novo Usuário:** Cadastre novos usuários no sistema.
-- **Nova Conta:** Crie contas bancárias para usuários já cadastrados.
-- **Listar Contas:** Veja todas as contas cadastradas no sistema.
-- **Sair:** Encerre o programa.
+- **Cadastro de clientes** (Pessoa Física)
+- **Criação de contas correntes** para clientes existentes
+- **Depósito** em conta
+- **Saque** com limite de valor e quantidade
+- **Extrato** de movimentações e saldo
+- **Listagem de contas** cadastradas
+- **Registro de transações** com data/hora
+- **Logs automáticos** das operações realizadas
 
 ## Como usar
 
-1. **Clone este repositório ou copie o código para um arquivo chamado `banco.py`.**
+1. **Salve o código em um arquivo chamado `banco.py`.**
 2. **Execute o arquivo no terminal:**
    ```bash
    python banco.py
@@ -35,14 +36,23 @@ Este é um projeto de sistema bancário simples, desenvolvido em Python, que per
 =>
 ```
 
+## Principais Classes e Estruturas
+
+- **Cliente / PessoaFisica:** Representa o cliente do banco.
+- **Conta / ContaCorrente:** Representa a conta bancária, com histórico de transações.
+- **Transacao / Saque / Deposito:** Hierarquia para registrar operações financeiras.
+- **Historico:** Armazena todas as transações realizadas na conta.
+- **ContasIterador:** Permite iterar e exibir todas as contas cadastradas.
+- **Decorador de log:** Registra data/hora de cada operação.
+
 ## Regras do sistema
 
 - O limite de saque por operação é de R$ 500,00.
 - O número máximo de saques diários é 3.
 - Não é permitido sacar valores superiores ao saldo disponível.
 - Não é permitido depositar ou sacar valores negativos ou zerados.
-- Para criar uma conta, o usuário deve estar cadastrado no sistema (CPF único).
-- Cada conta possui um número único e está vinculada a um usuário.
+- Para criar uma conta, o cliente deve estar cadastrado (CPF único).
+- Cada conta possui um número único e está vinculada a um cliente.
 
 ## Requisitos
 
@@ -51,3 +61,4 @@ Este é um projeto de sistema bancário simples, desenvolvido em Python, que per
 ## Licença
 
 Este projeto está sob a licença MIT.
+
